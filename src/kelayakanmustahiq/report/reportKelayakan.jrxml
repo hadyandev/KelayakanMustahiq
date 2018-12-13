@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ead4443d-5ea5-4635-a18e-ceacd11a5135">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     mustahiq.`nama_mustahiq` AS mustahiq_nama_mustahiq,
+     mustahiq.`alamat` AS mustahiq_alamat,
+     mustahiq.`jumlah_pendapatan` AS mustahiq_jumlah_pendapatan,
+     mustahiq.`jumlah_tanggungan` AS mustahiq_jumlah_tanggungan,
+     mustahiq.`kualitas_tempattinggal` AS mustahiq_kualitas_tempattinggal,
+     mustahiq.`attitude` AS mustahiq_attitude,
+     mustahiq.`kelayakan` AS mustahiq_kelayakan,
+     mustahiq.`status` AS mustahiq_status
+FROM
+     `mustahiq` mustahiq]]>
+	</queryString>
+	<field name="mustahiq_nama_mustahiq" class="java.lang.String"/>
+	<field name="mustahiq_jumlah_pendapatan" class="java.lang.Integer"/>
+	<field name="mustahiq_jumlah_tanggungan" class="java.lang.Integer"/>
+	<field name="mustahiq_kualitas_tempattinggal" class="java.lang.Integer"/>
+	<field name="mustahiq_attitude" class="java.lang.Integer"/>
+	<field name="mustahiq_kelayakan" class="java.lang.Float"/>
+	<field name="mustahiq_status" class="java.lang.String"/>
+	<group name="mustahiq_nama_mustahiq">
+		<groupExpression><![CDATA[$F{mustahiq_nama_mustahiq}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#006600" uuid="bc80b83a-7485-4cb7-8ec4-151daf40f9d0"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mustahiq_nama_mustahiq}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="b7aa547a-6d70-4735-91fa-5b04948c7a64"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="555" height="33" uuid="250fbf46-db02-4487-bfcf-6e80081ce24e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR KELAYAKAN MUSTAHIQ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="100" y="46" width="174" height="22" uuid="816e4d78-1bd5-4bfb-aa00-6ee5592770aa"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="1574d5a4-c01c-482b-8e26-81302802d804"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="0b9d1443-1b9a-455d-927b-b5749c498270"/>
+				<textElement textAlignment="Center">
+					<font fontName="Britannic Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pendapatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="cbab06b8-258f-4295-a17d-77234ea47140"/>
+				<textElement textAlignment="Center">
+					<font fontName="Britannic Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggungan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="6698ee27-8ea9-43a8-86bb-44f3561c8014"/>
+				<textElement textAlignment="Center">
+					<font fontName="Britannic Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kualitas Rumah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="cfdd4ce0-4337-48ce-b527-6976dea7ab9e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Britannic Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attitude]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="f8aa3ee5-0466-498b-aa76-73865b8dd429"/>
+				<textElement textAlignment="Center">
+					<font fontName="Britannic Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelayakan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="bee49093-b0c6-47f5-93ea-d944427eda3c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Britannic Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="a2deb99f-cf58-4a40-ab34-4b0a89119857"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="2e59b033-15f0-4726-a7e1-a7bdb7f98161"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mustahiq_jumlah_pendapatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="3ca9f96b-251d-441b-8914-1e5f1b982612"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mustahiq_jumlah_tanggungan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="d599988b-e005-43a6-8323-d26c752b6286"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mustahiq_kualitas_tempattinggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="daf12aa2-081a-4aee-945b-42e3d363c123"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mustahiq_attitude}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="703b2cfe-addc-401d-b271-3b4d0d85c590"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mustahiq_kelayakan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="0e663383-c3da-45f0-a572-2482632d473a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mustahiq_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="254b9879-c5eb-4051-b49d-e8fca8544080"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="9c284ad2-de7c-470c-b73b-ae15b456bf38"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="aa1c0e34-d044-4ec3-b9ac-87b1364ba54e"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="be448a0a-a0ac-4eac-898c-81b99762ad6b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
